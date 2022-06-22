@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>A64FX &#8212; PhD progress Jupyter book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">PhD progress Jupyter book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="a-hug.html">
+   A64fx on isambard
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="benchmark_c_crescendo.html">
+   Crescendo input
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CRESCENDO_DOLFINX.html">
+   Install CRESCENDO - 17 Feb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="datacentre_talk.html">
+   ISC 22 IODC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vol_crescendo.html">
+   Volume check crescendo mesh file
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="VolumeChecker.html">
+   Topology file
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://sb15895.github.io/PhD_progress/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://sb15895.github.io/PhD_progress//issues/new?title=Issue%20on%20page%20%2FIsambard.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Isambard.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   A64FX
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adios2-linked-with-hdf5">
+     ADIOS2 linked with HDF5
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adios2-shared-libraries">
+     ADIOS2 shared libraries
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adios2-building-with-hdf5">
+     ADIOS2 building with HDF5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#building-hdf5">
+       Building HDF5
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xci">
+   XCI
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pbs-script-issues">
+   PBS script issues
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>A64FX</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   A64FX
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adios2-linked-with-hdf5">
+     ADIOS2 linked with HDF5
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adios2-shared-libraries">
+     ADIOS2 shared libraries
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adios2-building-with-hdf5">
+     ADIOS2 building with HDF5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#building-hdf5">
+       Building HDF5
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xci">
+   XCI
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pbs-script-issues">
+   PBS script issues
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="a64fx">
+<h1>A64FX<a class="headerlink" href="#a64fx" title="Permalink to this headline">#</a></h1>
+<p>Default modules</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Currently</span> <span class="n">Loaded</span> <span class="n">Modulefiles</span><span class="p">:</span>
+ <span class="mi">1</span><span class="p">)</span> <span class="n">cpe</span><span class="o">-</span><span class="n">cray</span>                  <span class="mi">3</span><span class="p">)</span> <span class="n">craype</span><span class="o">/</span><span class="mf">2.7.0</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>   <span class="mi">5</span><span class="p">)</span> <span class="n">craype</span><span class="o">-</span><span class="n">network</span><span class="o">-</span><span class="n">infiniband</span>        <span class="mi">7</span><span class="p">)</span> <span class="n">gcc</span><span class="o">/</span><span class="mf">10.2.0</span>                                   <span class="mi">9</span><span class="p">)</span> <span class="n">cmake</span><span class="o">/</span><span class="mf">3.20.1</span>  
+ <span class="mi">2</span><span class="p">)</span> <span class="n">cce</span><span class="o">-</span><span class="n">sve</span><span class="o">/</span><span class="mf">10.0.1</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>   <span class="mi">4</span><span class="p">)</span> <span class="n">craype</span><span class="o">-</span><span class="n">arm</span><span class="o">-</span><span class="n">nsp1</span>         <span class="mi">6</span><span class="p">)</span> <span class="n">cray</span><span class="o">-</span><span class="n">libsci</span><span class="o">/</span><span class="mf">20.09.1.1</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>   <span class="mi">8</span><span class="p">)</span> <span class="n">cray</span><span class="o">-</span><span class="n">mvapich2_noslurm_nogpu</span><span class="o">/</span><span class="mf">2.3.4</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>  
+</pre></div>
+</div>
+<section id="adios2-linked-with-hdf5">
+<h2>ADIOS2 linked with HDF5<a class="headerlink" href="#adios2-linked-with-hdf5" title="Permalink to this headline">#</a></h2>
+<p>This works well. The shared library command is switched off and the HDF5 is not linked. One concern is that cxx compiler is cray/10.1 but the gcc compiler is gnu/8.01</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake -DMPIEXEC_EXECUTABLE=/opt/cray/pe/cray-mvapich2_noslurm_nogpu/2.3.4/infiniband/cray/10.0/bin/mpiexec -DCMAKE_C_COMPILER=/lustre/projects/bristol/modules-a64fx/gcc/10.2.0/bin/gcc -DCMAKE_Fortran_COMPILER=/lustre/projects/bristol/modules-a64fx/gcc/10.2.0/bin/gfortran -DADIOS2_USE_Fortran=OFF -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=$ADIOS2_DIR -DADIOS2_USE_HDF5=OFF ../ADIOS2/
+</pre></div>
+</div>
+</section>
+<section id="adios2-shared-libraries">
+<h2>ADIOS2 shared libraries<a class="headerlink" href="#adios2-shared-libraries" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake -DMPIEXEC_EXECUTABLE=/opt/cray/pe/cray-mvapich2_noslurm_nogpu/2.3.4/infiniband/cray/10.0/bin/mpiexec -DCMAKE_C_COMPILER=/lustre/projects/bristol/modules-a64fx/gcc/10.2.0/bin/gcc -DCMAKE_Fortran_COMPILER=/lustre/projects/bristol/modules-a64fx/gcc/10.2.0/bin/gfortran -DADIOS2_USE_Fortran=OFF -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=$ADIOS2_DIR -DADIOS2_USE_HDF5=OFF ../ADIOS2/
+</pre></div>
+</div>
+<p>Error:/home/ri-sbhardwaj/adios2-build/lib64/libadios2_core.so.2: undefined reference to `std::runtime_error::runtime_error(std::runtime_error&amp;&amp;)&#64;GLIBCXX_3.4.26’</p>
+</section>
+<section id="adios2-building-with-hdf5">
+<h2>ADIOS2 building with HDF5<a class="headerlink" href="#adios2-building-with-hdf5" title="Permalink to this headline">#</a></h2>
+<p>This doesnt work.</p>
+<section id="building-hdf5">
+<h3>Building HDF5<a class="headerlink" href="#building-hdf5" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CC=mpicc ./configure --enable-parallel --prefix=$HDF5_DIR
+make -j 16
+make install 
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake -DMPIEXEC_EXECUTABLE=/opt/cray/pe/cray-mvapich2_noslurm_nogpu/2.3.4/infiniband/cray/10.0/bin/mpiexec -DCMAKE_C_COMPILER=/lustre/projects/bristol/modules-a64fx/gcc/10.2.0/bin/gcc -DCMAKE_Fortran_COMPILER=/lustre/projects/bristol/modules-a64fx/gcc/10.2.0/bin/gfortran -DADIOS2_USE_Fortran=OFF -DHDF5_ROOT=$HDF5_DIR -DCMAKE_INSTALL_PREFIX=$ADIOS2_DIR ../ADIOS2/
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/opt/cray/pe/cce-sve/10.0.1/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: /home/ri-sbhardwaj/adios2-build/lib64/libadios2_core.so.2: undefined reference to `std::__cxx11::basic_stringstream&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_stringstream()@GLIBCXX_3.4.26&#39;
+/opt/cray/pe/cce-sve/10.0.1/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: /home/ri-sbhardwaj/adios2-build/lib64/libadios2_core.so.2: undefined reference to `std::logic_error::logic_error(std::logic_error&amp;&amp;)@GLIBCXX_3.4.26&#39;
+/opt/cray/pe/cce-sve/10.0.1/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: /home/ri-sbhardwaj/adios2-build/lib64/libadios2_core.so.2: undefined reference to `std::__cxx11::basic_ostringstream&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_ostringstream()@GLIBCXX_3.4.26&#39;
+/opt/cray/pe/cce-sve/10.0.1/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: /home/ri-sbhardwaj/adios2-build/lib64/libadios2_core.so.2: undefined reference to `std::runtime_error::runtime_error(std::runtime_error&amp;&amp;)@GLIBCXX_3.4.26&#39;
+collect2: error: ld returned 1 exit status
+make[2]: *** [examples/hello/bpWriter/CMakeFiles/hello_bpWriter_c.dir/build.make:98: bin/hello_bpWriter_c] Error 1
+make[1]: *** [CMakeFiles/Makefile2:4188: examples/hello/bpWriter/CMakeFiles/hello_bpWriter_c.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="xci">
+<h1>XCI<a class="headerlink" href="#xci" title="Permalink to this headline">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ri</span><span class="o">-</span><span class="n">sbhardwaj</span><span class="nd">@xcil00</span><span class="p">:</span><span class="o">~&gt;</span> <span class="n">lscpu</span>
+<span class="n">Architecture</span><span class="p">:</span>        <span class="n">aarch64</span>
+<span class="n">Byte</span> <span class="n">Order</span><span class="p">:</span>          <span class="n">Little</span> <span class="n">Endian</span>
+<span class="n">CPU</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>              <span class="mi">256</span>
+<span class="n">On</span><span class="o">-</span><span class="n">line</span> <span class="n">CPU</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="nb">list</span><span class="p">:</span> <span class="mi">0</span><span class="o">-</span><span class="mi">255</span>
+<span class="n">Thread</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">per</span> <span class="n">core</span><span class="p">:</span>  <span class="mi">4</span>
+<span class="n">Core</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">per</span> <span class="n">socket</span><span class="p">:</span>  <span class="mi">32</span>
+<span class="n">Socket</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>           <span class="mi">2</span>
+<span class="n">NUMA</span> <span class="n">node</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>        <span class="mi">2</span>
+<span class="n">Vendor</span> <span class="n">ID</span><span class="p">:</span>           <span class="n">Cavium</span>
+<span class="n">Model</span><span class="p">:</span>               <span class="mi">2</span>
+<span class="n">Model</span> <span class="n">name</span><span class="p">:</span>          <span class="n">ThunderX2</span> <span class="mi">99</span><span class="n">xx</span>
+<span class="n">Stepping</span><span class="p">:</span>            <span class="mh">0x1</span>
+<span class="n">BogoMIPS</span><span class="p">:</span>            <span class="mf">400.00</span>
+<span class="n">L1d</span> <span class="n">cache</span><span class="p">:</span>           <span class="mi">32</span><span class="n">K</span>
+<span class="n">L1i</span> <span class="n">cache</span><span class="p">:</span>           <span class="mi">32</span><span class="n">K</span>
+<span class="n">L2</span> <span class="n">cache</span><span class="p">:</span>            <span class="mi">256</span><span class="n">K</span>
+<span class="n">L3</span> <span class="n">cache</span><span class="p">:</span>            <span class="mi">32768</span><span class="n">K</span>
+<span class="n">NUMA</span> <span class="n">node0</span> <span class="n">CPU</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>   <span class="mi">0</span><span class="o">-</span><span class="mi">31</span><span class="p">,</span><span class="mi">64</span><span class="o">-</span><span class="mi">95</span><span class="p">,</span><span class="mi">128</span><span class="o">-</span><span class="mi">159</span><span class="p">,</span><span class="mi">192</span><span class="o">-</span><span class="mi">223</span>
+<span class="n">NUMA</span> <span class="n">node1</span> <span class="n">CPU</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>   <span class="mi">32</span><span class="o">-</span><span class="mi">63</span><span class="p">,</span><span class="mi">96</span><span class="o">-</span><span class="mi">127</span><span class="p">,</span><span class="mi">160</span><span class="o">-</span><span class="mi">191</span><span class="p">,</span><span class="mi">224</span><span class="o">-</span><span class="mi">255</span>
+<span class="n">Flags</span><span class="p">:</span>               <span class="n">fp</span> <span class="n">asimd</span> <span class="n">evtstrm</span> <span class="n">aes</span> <span class="n">pmull</span> <span class="n">sha1</span> <span class="n">sha2</span> <span class="n">crc32</span> <span class="n">atomics</span> <span class="n">cpuid</span> <span class="n">asimdrdm</span>
+</pre></div>
+</div>
+<p>CPUs are 256, but are overthreaded. If threading is not needed, then only 64 MPI ranks per node. Node has 2 sockets, with 32 cores.</p>
+<p><a class="reference external" href="https://gw4-isambard.github.io/docs/user-guide/XCI.html">https://gw4-isambard.github.io/docs/user-guide/XCI.html</a></p>
+<p>Built environment, use qsub for pbs script.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qsub</span> <span class="pre">isambard_xci.pbs</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/home/ri-sbhardwaj/benchmark_c/Source_files/bench:</span> <span class="pre">error</span> <span class="pre">while</span> <span class="pre">loading</span> <span class="pre">shared</span> <span class="pre">libraries:</span> <span class="pre">libzmq.so.5:</span> <span class="pre">cannot</span> <span class="pre">open</span> <span class="pre">shared</span> <span class="pre">object</span> <span class="pre">file:</span> <span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code></p>
+<p>Shut off zeromq in adios2 build</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=$ADIOS2_DIR</span> <span class="pre">-DHDF5_ROOT=$HDF5_DIR</span> <span class="pre">-DADIOS2_USE_ZeroMQ=OFF</span> <span class="pre">../ADIOS2</span></code></p>
+<div>
+<img src="imgs/adios2_xcl.png" width="500"/>
+</div>
+<p>Still problems with zeromq</p>
+<p>Install libzmq</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/zeromq/libzmq.git
+./autogen.sh 
+./configure CC=cc --prefix=$LIBZMQ_DIR
+make 
+make install 
+export LD_LIBRARY_PATH=$LIBZMQ_DIR/lib:$LD_LIBRARY_PATH
+</pre></div>
+</div>
+</section>
+<section id="pbs-script-issues">
+<h1>PBS script issues<a class="headerlink" href="#pbs-script-issues" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingOtherRes.htm%3FTocPath%3DChapter%25203%253A%2520Submitting%2520and%2520Managing%2520Jobs%7C3.1%2520%25C2%25A0Job%2520Submission%7C_____7">http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingOtherRes.htm?TocPath=Chapter%203%3A%20Submitting%20and%20Managing%20Jobs|3.1%20%C2%A0Job%20Submission|_____7</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shrey<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
