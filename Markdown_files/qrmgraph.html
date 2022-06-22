@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>QRM March22 &#8212; PhD progress Jupyter book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Crescendo input" href="benchmark_c_crescendo.html" />
+    <link rel="prev" title="A64fx on isambard" href="a-hug.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">PhD progress Jupyter book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    PhD progress
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="a-hug.html">
+   A64fx on isambard
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   QRM March22
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="benchmark_c_crescendo.html">
+   Crescendo input
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CRESCENDO_DOLFINX.html">
+   Install CRESCENDO - 17 Feb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="datacentre_talk.html">
+   ISC 22 IODC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vol_crescendo.html">
+   Volume check crescendo mesh file
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="VolumeChecker.html">
+   Topology file
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://sb15895.github.io/PhD_progress"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://sb15895.github.io/PhD_progress/issues/new?title=Issue%20on%20page%20%2FMarkdown_files/qrmgraph.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Markdown_files/qrmgraph.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stripe-size-comparison-rank-2048">
+   Stripe size comparison rank 2048
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stripe-count-comparisons-rank-2048">
+   Stripe count comparisons rank 2048
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#io-rates-between-nvme-file-mounting-and-archer2">
+   IO rates between NVMe File mounting and ARCHER2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discussion-of-results">
+   Discussion of results
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>QRM March22</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stripe-size-comparison-rank-2048">
+   Stripe size comparison rank 2048
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stripe-count-comparisons-rank-2048">
+   Stripe count comparisons rank 2048
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#io-rates-between-nvme-file-mounting-and-archer2">
+   IO rates between NVMe File mounting and ARCHER2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discussion-of-results">
+   Discussion of results
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="qrm-march22">
+<h1>QRM March22<a class="headerlink" href="#qrm-march22" title="Permalink to this headline">#</a></h1>
+<section id="stripe-size-comparison-rank-2048">
+<h2>Stripe size comparison rank 2048<a class="headerlink" href="#stripe-size-comparison-rank-2048" title="Permalink to this headline">#</a></h2>
+<p>Shows lower stripe sizes perform better I/O.</p>
+<a class="reference internal image-reference" href="../_images/stripesize.png"><img alt="../_images/stripesize.png" src="../_images/stripesize.png" style="width: 500px;" /></a>
+</section>
+<section id="stripe-count-comparisons-rank-2048">
+<h2>Stripe count comparisons rank 2048<a class="headerlink" href="#stripe-count-comparisons-rank-2048" title="Permalink to this headline">#</a></h2>
+<p>Comparison between stripe counts, and default stripe size. Shows more stripe counts gives better performance.
+Interesting, ADIOS2 performance doesnt vary significantly with changing stripe counts.</p>
+<a class="reference internal image-reference" href="imgs/mount.*"><img alt="imgs/mount.*" src="imgs/mount.*" style="width: 500px;" /></a>
+</section>
+<section id="io-rates-between-nvme-file-mounting-and-archer2">
+<h2>IO rates between NVMe File mounting and ARCHER2<a class="headerlink" href="#io-rates-between-nvme-file-mounting-and-archer2" title="Permalink to this headline">#</a></h2>
+<p>Comparison between mount dir and archer2 file system. Shows that the mount dir is slightly better but can be improved.</p>
+<a class="reference internal image-reference" href="imgs/mount.*"><img alt="imgs/mount.*" src="imgs/mount.*" style="width: 500px;" /></a>
+</section>
+<section id="discussion-of-results">
+<h2>Discussion of results<a class="headerlink" href="#discussion-of-results" title="Permalink to this headline">#</a></h2>
+<p>The results obtained from the benchmarking show that the write rates obtained by using ADIOS2 BP4 I/O engine were higher than when using MPIIO, HDF5 and ADIOS2 HDF5 I/O engine.
+Using 2048 MPI ranks (16 full nodes), full stripe count (8) and default stripe size (1 MiB) ADIOS2 BP4 IO engine achieved a 4x improvement in IO write rates as compared to the HDF5 IO library. The peak writing rate in this configuration achieving using ADIOS2 BP4 was 13.3GB/s and by using HDF5 was 3.23GB/s. Additionally it was found that the write rates increased as the stripe counts increase and decreased as the stripe sizes increased.
+One of the reasons for these findings is ADIOS2 BP4 engine writes a lot of small files which do not need to be contiguous. It saves time by partially rearranging data and reducing contention in the file system \cite{noauthor_pio2_2019} which makes it faster than the other IO layers.</p>
+<p>stripe counts
+By varying stripe counts in sequence 1,2,4,8 (with 8 being the max stripe count), it was found that the IO write rates increased as the stripe counts increased. However, in the case of ADIOS2 BP4 IO engine, the write rates did not change as significantly as the other IO layers with changing stripe counts.<br />
+stripe sizes
+By varying stripe sizes in sequence 1MiB, 2MiB, 4MiB, 8MiB, 1000MiB, 2000MiB and 4000MiB (1MiB being the smallest possible, 4000MiB being the largest possible) it was observed that the IO write rates decreased as the stripe sizes increased. This is explained by the relatively higher bandwidth of IO required by this application with larger array sizes.
+Burst buffer
+The Burst buffer file system of ARCHER2 was also benchmarked using this program. It was found that the IO rates achieved using this file system were higher than using the work directory of ARCHER2.
+WHY?
+need to find out the exact method of burst buffers operation in ARCHER2. Is that bandwidth sharing when overrun in main folder or completely standalone system.</p>
+<p>Methodology:</p>
+<p>The benchmarking program was run on the work directory of the ARCHER2 system. The jobs were submitted using SLURM with a job script to specify the stripe counts, stripe sizes, number of nodes and tasks per node. The results of these jobs were then averaged from 3 runs using a python script which was then used to visualise the results.</p>
+<p>modules used
+Compilers used are the following;<br />
+\item PrgEnv-gnu/8.0.0<br />
+\item gcc/10.2.0
+\item cray-mpich/8.1.4<br />
+\item cmake/3.21.3</p>
+<p>Modules/libraries used are the following;</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\item craype/2.7.6     
+\item libfabric/1.11.0.4.71  
+\item perftools-base/21.02.0                      
+\item bolt/0.7       
+\item load-epcc-module 
+\item cray-hdf5-parallel/1.12.0.3
+\item craype-x86-rome  
+\item craype-network-ofi   
+\item xpmem/2.2.40-7.0.1.0\_2.7\_\_g1d7a24d.shasta  
+\item cray-libsci/21.04.1.1
+\item epcc-setup-env 
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Markdown_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="a-hug.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">A64fx on isambard</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="benchmark_c_crescendo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Crescendo input</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shrey<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
