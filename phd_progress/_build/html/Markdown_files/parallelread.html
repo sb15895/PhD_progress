@@ -217,7 +217,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://sb15895.github.io/PhD_progress/"
+        <a href="https://sb15895.github.io/PhD_progress"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -234,7 +234,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://sb15895.github.io/PhD_progress//issues/new?title=Issue%20on%20page%20%2FMarkdown_files/parallelread.html&body=Your%20issue%20content%20here."
+        <a href="https://sb15895.github.io/PhD_progress/issues/new?title=Issue%20on%20page%20%2FMarkdown_files/parallelread.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -351,7 +351,7 @@ title="Print to PDF"
               <div>
                 
   <p>Code taken from PETSc from Paul to read the correct hyperslabs from the dataset even if the size is not divisible by dataset total global dimensions.</p>
-<p><a class="reference external" href="https://petsc.org/release/src/ksp/ksp/tutorials/ex3.c.html">https://petsc.org/release/src/ksp/ksp/tutorials/ex3.c.html</a></p>
+<p>https://petsc.org/release/src/ksp/ksp/tutorials/ex3.c.html</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    start[0] = rank*(DIM1/size) + ((DIM1%size) &lt; rank ? (DIM1%size) : rank);
     start[1] = 0;
 
@@ -362,9 +362,7 @@ title="Print to PDF"
     count[1] = end[1] - start[1];
 </pre></div>
 </div>
-<div>
-<img src="imgs/h5dump_comparison.png" width="500"/>
-</div>
+<a class="reference internal image-reference" href="../_images/h5dump_comparison.png"><img alt="../_images/h5dump_comparison.png" src="../_images/h5dump_comparison.png" style="width: 500px;" /></a>
 <p>A comparision between h5dump of a test hdf5 file and the file first read and then written out by program. Conducted across 2 and 3 ranks.
 This confirms that all ranks are reading their respective slabs.</p>
 

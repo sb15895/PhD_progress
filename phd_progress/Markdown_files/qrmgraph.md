@@ -1,22 +1,21 @@
 # QRM March22 
 ### Stripe size comparison rank 2048
 Shows lower stripe sizes perform better I/O. 
-<div>
-<img src="imgs/stripesize.pdf" width="500"/>
-</div>
+
+<img src=" ../imgs/stripesize.*" width="500px">
 
 ### Stripe count comparisons rank 2048
 Comparison between stripe counts, and default stripe size. Shows more stripe counts gives better performance. 
 Interesting, ADIOS2 performance doesnt vary significantly with changing stripe counts. 
-<div>
-<img src="imgs/stripecount.pdf" width="500"/>
-</div>
+
+<img src= "../imgs/mount.*" width="500px">
 
 ### IO rates between NVMe File mounting and ARCHER2 
 Comparison between mount dir and archer2 file system. Shows that the mount dir is slightly better but can be improved. 
-<div>
-<img src="imgs/mount.pdf" width="500"/>
-</div>
+
+
+<img src=" ../imgs/mount.*" width="500px">
+
 
 ### Discussion of results 
 

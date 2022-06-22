@@ -13,9 +13,7 @@ https://petsc.org/release/src/ksp/ksp/tutorials/ex3.c.html
     count[1] = end[1] - start[1];
 ``` 
 
-<div>
-<img src="imgs/h5dump_comparison.png" width="500"/>
-</div>
-
+<img src="../imgs/h5dump_comparison.png" width="500">
+    
 A comparision between h5dump of a test hdf5 file and the file first read and then written out by program. Conducted across 2 and 3 ranks. 
 This confirms that all ranks are reading their respective slabs. 

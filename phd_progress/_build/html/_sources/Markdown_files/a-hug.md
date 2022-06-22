@@ -15,12 +15,8 @@ hdf5/1.12.0/gcc-11
 
 mpi module is ```cray-mvapich2_noslurm_nogpu``` 
 
-<div>
-<img src="imgs/modulelist_isambard.png" width="1000"/>
-</div>
+<img src="../imgs/modulelist_isambard.png" width="1000">
 
 ### building adios2 
 
-<div>
-<img src="imgs/error_adios2.png" width="1000"/>
-</div>
+<img src="../imgs/error_adios2.png" width="1000">

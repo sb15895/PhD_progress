@@ -21,14 +21,13 @@ y[j] = iodata[(topology[i*DIM2+j])*DIM4 + 1];
 z[j] = iodata[(topology[i*DIM2+j])*DIM4 + 2];
 ``` 
 From H5DUMP of mesh file:  
-<div>
-<img src="imgs/iodatah5dump.png" width="500"/>
-</div>
+
+<img src="../imgs/iodatah5dump.png" width="500">
+
 
 From topology mesh read using volume c file: 
-<div>
-<img src="imgs/topology_mesh.png" width="500"/>
-</div>
+
+<img src="../imgs/topology_mesh.png" width="500">
 
             
 ### Volume of tetrahedron

@@ -19,17 +19,13 @@ processes are 0.
 Done by adding a crescendo flag essentially for graphs with 1 IO rate for 1 layer and 1 MPI rank. 
 This flag changes the plotting function as well. Can potentially be more streamlined in the future. 
 
-<div>
-<img src="imgs/crescendo.pdf" width="500"/>
-</div>
+<img src="../imgs/crescendo.pdf" width="500">
 
 Results from 8 full nodes on ARCHER2, averaged 3 times and 10 times in program. 
 
 BP4 has a lot faster parallel write performance, however peak has still not reached with max of 8 nodes. 
 
-<div>
-<img src="imgs/crescendo_32nodes.pdf" width="500"/>
-</div>
+<img src="../imgs/crescendo_32nodes.pdf" width="500">
 
 Results from 32 full nodes on ARCHER2, averaged 3 times and 10 times in program. 
 
