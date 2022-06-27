@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Volume check crescendo mesh file &#8212; PhD progress Jupyter book</title>
+    <title>FENICSx &#8212; PhD progress Jupyter book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Topology file" href="VolumeChecker.html" />
-    <link rel="prev" title="5. ISC 22 IODC" href="datacentre_talk.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
   Work done
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="a-hug.html">
    1. A64fx on isambard
@@ -142,8 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
    5. ISC 22 IODC
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vol_crescendo.html">
    6. Volume check crescendo mesh file
   </a>
  </li>
@@ -254,7 +252,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://sb15895.github.io/PhD_progress/issues/new?title=Issue%20on%20page%20%2FMarkdown_files/vol_crescendo.html&body=Your%20issue%20content%20here."
+        <a href="https://sb15895.github.io/PhD_progress/issues/new?title=Issue%20on%20page%20%2FMarkdown_files/add_fenicsx.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -282,7 +280,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Markdown_files/vol_crescendo.md"
+        <a href="../_sources/Markdown_files/add_fenicsx.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -319,23 +317,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   FENICSx
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cpp-code">
+   cpp code
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Volume check crescendo mesh file</h1>
+                <h1>FENICSx</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   FENICSx
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cpp-code">
+   cpp code
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -343,18 +388,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="volume-check-crescendo-mesh-file">
-<h1><span class="section-number">6. </span>Volume check crescendo mesh file<a class="headerlink" href="#volume-check-crescendo-mesh-file" title="Permalink to this headline">#</a></h1>
-<p>Directory for crescendo meshes of various refinements.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">e609</span><span class="o">/</span><span class="n">e609</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">crescendo</span><span class="o">-</span><span class="n">nx</span>
-</pre></div>
-</div>
-<p>PDF file for using dolfinx on archer2.
-http://localhost:8888/lab/tree/OneDrive%20-%20University%20of%20Edinburgh/phd_files/Year3/JupyterLab/PDF_FILES/FEniCSX_ARCHER2.pdf</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">e609</span><span class="o">/</span><span class="n">e609</span><span class="o">/</span><span class="n">shr203</span><span class="o">/</span><span class="n">CRESCENDO</span>
-</pre></div>
-</div>
-<p>job script directory</p>
+  <section id="fenicsx">
+<h1>FENICSx<a class="headerlink" href="#fenicsx" title="Permalink to this headline">#</a></h1>
+<p>Dolfinx directory:
+/work/e609/e609/shared/crescendo-nx</p>
+</section>
+<section id="cpp-code">
+<h1>cpp code<a class="headerlink" href="#cpp-code" title="Permalink to this headline">#</a></h1>
+<p>/work/e609/e609/shr203/crescendo-wholeengine-structural-cpp/main.cpp</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -384,20 +425,6 @@ http://localhost:8888/lab/tree/OneDrive%20-%20University%20of%20Edinburgh/phd_fi
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="datacentre_talk.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>ISC 22 IODC</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="VolumeChecker.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Topology file</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
