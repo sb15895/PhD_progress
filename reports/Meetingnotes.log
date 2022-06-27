@@ -1,0 +1,95 @@
+Traceback (most recent call last):
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/shrey/.conda/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from IPython.display import Image, display
+import datetime as dt
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+import numpy as np
+
+# def gantt_chart(start,end):
+    
+#     df = pd.read_csv('schedule.csv')
+
+#     # project start date
+#     proj_start = df.Start.min()# number of days from project start to task start
+#     # number of days from project start to task start
+#     df['start_num'] = (pd.to_datetime(df['Start']) - pd.to_datetime(proj_start) ).dt.days
+#     # number of days from project start to end of tasks
+#     df['end_num'] = (pd.to_datetime(df['End'])- pd.to_datetime(proj_start)).dt.days
+
+#     # df['days_start_to_end'] = (pd.to_datetime(df['End']).dt.day - pd.to_datetime(df['Start']).dt.day ) 
+#     df['days_start_to_end'] = df.end_num - df.start_num
+#     df['current_num'] = (df.days_start_to_end * df.Completion)
+
+#     # fig, ax = plt.subplots(1, figsize=(16,6))
+#     # ax.barh(df.Task, df.days_start_to_end, height=1, left=df.start_num)
+#     # plt.show() 
+
+#     fig, ax = plt.subplots(1, figsize=(10,12)) # bars
+#     ax.barh(df.Task, df.current_num, left=df.start_num)
+#     ax.barh(df.Task, df.days_start_to_end, left=df.start_num, alpha=0.5)# texts
+#     for idx, row in df.iterrows():
+#         ax.text(row.end_num+0.1, idx, 
+#                 f"{int(row.Completion)}%", 
+#                 va='center', alpha=1)
+
+#     ##### LEGENDS #####
+#     # c_dict = {'EPCC':'#E64646'} 
+#     # legend_elements = [Patch(facecolor=c_dict[i], label=i)  for i in c_dict]
+#     # plt.legend(handles=legend_elements)
+
+#     ##### TICKS #####
+
+#     xticks = np.arange(df.start_num.max(), df.end_num.max()) 
+#     xticks_labels = pd.date_range(df.Start.max(), end=df.End.max()).strftime("%m/%y")
+
+#     xticks_minor = np.arange(0, df.end_num.max()+1, 1)
+#     ax.set_xticklabels(xticks_labels)
+#     plt.show()
+
+
+def gantt_chart_duration(argument):
+    match argument:
+        case 0:
+            return i = Image(filename='imgs/adios_h5_g.png')  
+        case 1:
+            return "one"
+        case 2:
+            return "two"
+        case 3:
+            return "three"
+        case 4:
+            return "four"        
+        case default:
+            return "something"
+ 
+ 
+# if __name__ = "__main__":
+#     gantt_chart_duration()
+------------------
+
+[0;36m  Input [0;32mIn [1][0;36m[0m
+[0;31m    return i = Image(filename='imgs/adios_h5_g.png')[0m
+[0m             ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (3598288115.py, line 53)
+
