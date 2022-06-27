@@ -4,6 +4,7 @@ format: jb-book
 root: intro 
 parts:
 - caption: Work done
+  numbered: True
   chapters:
   - file: Markdown_files/a-hug
   - file: Markdown_files/qrmgraph
@@ -14,6 +15,7 @@ parts:
   - file: Markdown_files/vol_crescendo
   - file: Markdown_files/VolumeChecker
 - caption: Meeting notes 
+  numbered: True
   chapters: 
   - file: Meetingnotes 
 

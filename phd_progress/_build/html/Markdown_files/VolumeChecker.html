@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Topology file &#8212; PhD progress Jupyter book</title>
+    <title>7. Topology file &#8212; PhD progress Jupyter book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Gantt chart" href="../Meetingnotes.html" />
-    <link rel="prev" title="Volume check crescendo mesh file" href="vol_crescendo.html" />
+    <link rel="next" title="8. Gantt chart" href="../Meetingnotes.html" />
+    <link rel="prev" title="6. Volume check crescendo mesh file" href="vol_crescendo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,37 +119,37 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="a-hug.html">
-   A64fx on isambard
+   1. A64fx on isambard
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="qrmgraph.html">
-   QRM March22
+   2. QRM March22
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="benchmark_c_crescendo.html">
-   Crescendo input
+   3. Crescendo input
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="CRESCENDO_DOLFINX.html">
-   Install CRESCENDO - 17 Feb
+   4. Install CRESCENDO - 17 Feb
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="datacentre_talk.html">
-   ISC 22 IODC
+   5. ISC 22 IODC
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vol_crescendo.html">
-   Volume check crescendo mesh file
+   6. Volume check crescendo mesh file
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Topology file
+   7. Topology file
   </a>
  </li>
 </ul>
@@ -161,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Meetingnotes.html">
-   Gantt chart
+   8. Gantt chart
   </a>
  </li>
 </ul>
@@ -343,17 +343,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cross-reference-mesh-data-points-with-geometry">
-   Cross reference mesh data points with geometry
+   7.1. Cross reference mesh data points with geometry
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#volume-of-tetrahedron">
-   Volume of tetrahedron
+   7.2. Volume of tetrahedron
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtain-volume-calculations-from-every-rank">
-   Obtain volume calculations from every rank
+   7.3. Obtain volume calculations from every rank
   </a>
  </li>
 </ul>
@@ -377,17 +377,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cross-reference-mesh-data-points-with-geometry">
-   Cross reference mesh data points with geometry
+   7.1. Cross reference mesh data points with geometry
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#volume-of-tetrahedron">
-   Volume of tetrahedron
+   7.2. Volume of tetrahedron
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtain-volume-calculations-from-every-rank">
-   Obtain volume calculations from every rank
+   7.3. Obtain volume calculations from every rank
   </a>
  </li>
 </ul>
@@ -401,7 +401,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="topology-file">
-<h1>Topology file<a class="headerlink" href="#topology-file" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">7. </span>Topology file<a class="headerlink" href="#topology-file" title="Permalink to this headline">#</a></h1>
 <p>Dataset file name should be in triple quotes otherwise we get segmentation fault.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define FILE      &quot;/home/shrey/coding/crescendo-wholeengine-structural-cpp/mesh/CRESCENDO_ENGINE_LTMS_order1.h5&quot;</span>
 <span class="c1">#define DATASET      &quot;&quot;&quot;MeshTags/tetra marker/topology&quot;&quot;&quot; </span>
@@ -415,7 +415,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <section id="cross-reference-mesh-data-points-with-geometry">
-<h2>Cross reference mesh data points with geometry<a class="headerlink" href="#cross-reference-mesh-data-points-with-geometry" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.1. </span>Cross reference mesh data points with geometry<a class="headerlink" href="#cross-reference-mesh-data-points-with-geometry" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">iodata</span><span class="p">[(</span><span class="n">topology</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">DIM2</span><span class="o">+</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">DIM4</span><span class="p">];</span> 
 <span class="n">y</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">iodata</span><span class="p">[(</span><span class="n">topology</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">DIM2</span><span class="o">+</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">DIM4</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span> 
 <span class="n">z</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">iodata</span><span class="p">[(</span><span class="n">topology</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">DIM2</span><span class="o">+</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">DIM4</span> <span class="o">+</span> <span class="mi">2</span><span class="p">];</span>
@@ -427,7 +427,7 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../_images/topology_mesh.png"><img alt="../_images/topology_mesh.png" src="../_images/topology_mesh.png" style="width: 500px;" /></a>
 </section>
 <section id="volume-of-tetrahedron">
-<h2>Volume of tetrahedron<a class="headerlink" href="#volume-of-tetrahedron" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2. </span>Volume of tetrahedron<a class="headerlink" href="#volume-of-tetrahedron" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">volume</span> <span class="o">=</span>    <span class="p">(</span>   <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span>
                                <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>   <span class="o">+</span> 
                <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span> <span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span>
@@ -439,7 +439,7 @@ title="Print to PDF"
 <p>Ref: https://keisan.casio.com/exec/system/1223609147</p>
 </section>
 <section id="obtain-volume-calculations-from-every-rank">
-<h2>Obtain volume calculations from every rank<a class="headerlink" href="#obtain-volume-calculations-from-every-rank" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.3. </span>Obtain volume calculations from every rank<a class="headerlink" href="#obtain-volume-calculations-from-every-rank" title="Permalink to this headline">#</a></h2>
 <p>MPI gather from all ranks and compute the sum.</p>
 <p>But different ranks give different volumes.</p>
 </section>
@@ -476,13 +476,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Volume check crescendo mesh file</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Volume check crescendo mesh file</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../Meetingnotes.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Gantt chart</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Gantt chart</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

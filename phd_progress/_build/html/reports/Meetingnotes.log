@@ -23,73 +23,40 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import numpy as np
+import plotly.express as px
+import plotly.figure_factory as ff
 
-# def gantt_chart(start,end):
-    
-#     df = pd.read_csv('schedule.csv')
+figure(figsize=(10,12), dpi=80)
+df = [dict(Task="Third Year Review", Start='2022-11-01', Finish='2022-12-01'),
+      dict(Task="HPC IO tuner", Start='2022-07-10', Finish='2022-07-30'),
+      dict(Task="SC deadline", Start='2022-08-1', Finish='2022-08-10'),
+      dict(Task="Threads utilisation", Start='2022-07-25', Finish='2022-07-30'),
+      dict(Task="Add fenicsX", Start='2022-07-25', Finish='2022-07-30'),
+      dict(Task="SC deadline", Start='2022-08-1', Finish='2022-08-10'),
+      dict(Task="Second Year Review", Start='2021-11-01', Finish='2021-12-01'),
+      dict(Task="CIUK 21", Start='2021-10-01', Finish='2021-11-01'),
+      dict(Task="First Year Review", Start='2021-1-01', Finish='2021-2-01')]
 
-#     # project start date
-#     proj_start = df.Start.min()# number of days from project start to task start
-#     # number of days from project start to task start
-#     df['start_num'] = (pd.to_datetime(df['Start']) - pd.to_datetime(proj_start) ).dt.days
-#     # number of days from project start to end of tasks
-#     df['end_num'] = (pd.to_datetime(df['End'])- pd.to_datetime(proj_start)).dt.days
-
-#     # df['days_start_to_end'] = (pd.to_datetime(df['End']).dt.day - pd.to_datetime(df['Start']).dt.day ) 
-#     df['days_start_to_end'] = df.end_num - df.start_num
-#     df['current_num'] = (df.days_start_to_end * df.Completion)
-
-#     # fig, ax = plt.subplots(1, figsize=(16,6))
-#     # ax.barh(df.Task, df.days_start_to_end, height=1, left=df.start_num)
-#     # plt.show() 
-
-#     fig, ax = plt.subplots(1, figsize=(10,12)) # bars
-#     ax.barh(df.Task, df.current_num, left=df.start_num)
-#     ax.barh(df.Task, df.days_start_to_end, left=df.start_num, alpha=0.5)# texts
-#     for idx, row in df.iterrows():
-#         ax.text(row.end_num+0.1, idx, 
-#                 f"{int(row.Completion)}%", 
-#                 va='center', alpha=1)
-
-#     ##### LEGENDS #####
-#     # c_dict = {'EPCC':'#E64646'} 
-#     # legend_elements = [Patch(facecolor=c_dict[i], label=i)  for i in c_dict]
-#     # plt.legend(handles=legend_elements)
-
-#     ##### TICKS #####
-
-#     xticks = np.arange(df.start_num.max(), df.end_num.max()) 
-#     xticks_labels = pd.date_range(df.Start.max(), end=df.End.max()).strftime("%m/%y")
-
-#     xticks_minor = np.arange(0, df.end_num.max()+1, 1)
-#     ax.set_xticklabels(xticks_labels)
-#     plt.show()
+fig = ff.create_gantt(df)
+fig.show()
 
 
-def gantt_chart_duration(argument):
-    match argument:
-        case 0:
-            return i = Image(filename='imgs/adios_h5_g.png')  
-        case 1:
-            return "one"
-        case 2:
-            return "two"
-        case 3:
-            return "three"
-        case 4:
-            return "four"        
-        case default:
-            return "something"
- 
- 
-# if __name__ = "__main__":
-#     gantt_chart_duration()
 ------------------
 
-[0;36m  Input [0;32mIn [1][0;36m[0m
-[0;31m    return i = Image(filename='imgs/adios_h5_g.png')[0m
-[0m             ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Input [0;32mIn [1][0m, in [0;36m<cell line: 10>[0;34m()[0m
+[1;32m      7[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexpress[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpx[39;00m
+[1;32m      8[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mfigure_factory[39;00m [38;5;28;01mas[39;00m [38;5;21;01mff[39;00m
+[0;32m---> 10[0m [43mfigure[49m(figsize[38;5;241m=[39m([38;5;241m10[39m,[38;5;241m12[39m), dpi[38;5;241m=[39m[38;5;241m80[39m)
+[1;32m     11[0m df [38;5;241m=[39m [[38;5;28mdict[39m(Task[38;5;241m=[39m[38;5;124m"[39m[38;5;124mThird Year Review[39m[38;5;124m"[39m, Start[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2022-11-01[39m[38;5;124m'[39m, Finish[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2022-12-01[39m[38;5;124m'[39m),
+[1;32m     12[0m       [38;5;28mdict[39m(Task[38;5;241m=[39m[38;5;124m"[39m[38;5;124mHPC IO tuner[39m[38;5;124m"[39m, Start[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2022-07-10[39m[38;5;124m'[39m, Finish[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2022-07-30[39m[38;5;124m'[39m),
+[1;32m     13[0m       [38;5;28mdict[39m(Task[38;5;241m=[39m[38;5;124m"[39m[38;5;124mSC deadline[39m[38;5;124m"[39m, Start[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2022-08-1[39m[38;5;124m'[39m, Finish[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2022-08-10[39m[38;5;124m'[39m),
+[0;32m   (...)[0m
+[1;32m     18[0m       [38;5;28mdict[39m(Task[38;5;241m=[39m[38;5;124m"[39m[38;5;124mCIUK 21[39m[38;5;124m"[39m, Start[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2021-10-01[39m[38;5;124m'[39m, Finish[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2021-11-01[39m[38;5;124m'[39m),
+[1;32m     19[0m       [38;5;28mdict[39m(Task[38;5;241m=[39m[38;5;124m"[39m[38;5;124mFirst Year Review[39m[38;5;124m"[39m, Start[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2021-1-01[39m[38;5;124m'[39m, Finish[38;5;241m=[39m[38;5;124m'[39m[38;5;124m2021-2-01[39m[38;5;124m'[39m)]
+[1;32m     21[0m fig [38;5;241m=[39m ff[38;5;241m.[39mcreate_gantt(df)
 
-SyntaxError: invalid syntax (3598288115.py, line 53)
+[0;31mNameError[0m: name 'figure' is not defined
+NameError: name 'figure' is not defined
 

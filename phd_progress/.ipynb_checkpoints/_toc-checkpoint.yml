@@ -1,10 +1,10 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
-root: 
-- file: Meetingnotes
+root: intro 
 parts:
 - caption: Work done
+  numbered: True
   chapters:
   - file: Markdown_files/a-hug
   - file: Markdown_files/qrmgraph
@@ -15,6 +15,7 @@ parts:
   - file: Markdown_files/vol_crescendo
   - file: Markdown_files/VolumeChecker
 - caption: Meeting notes 
+  numbered: True
   chapters: 
   - file: Meetingnotes 
 

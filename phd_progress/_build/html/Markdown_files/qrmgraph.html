@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>QRM March22 &#8212; PhD progress Jupyter book</title>
+    <title>2. QRM March22 &#8212; PhD progress Jupyter book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Crescendo input" href="benchmark_c_crescendo.html" />
-    <link rel="prev" title="A64fx on isambard" href="a-hug.html" />
+    <link rel="next" title="3. Crescendo input" href="benchmark_c_crescendo.html" />
+    <link rel="prev" title="1. A64fx on isambard" href="a-hug.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,37 +119,37 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="a-hug.html">
-   A64fx on isambard
+   1. A64fx on isambard
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   QRM March22
+   2. QRM March22
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="benchmark_c_crescendo.html">
-   Crescendo input
+   3. Crescendo input
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="CRESCENDO_DOLFINX.html">
-   Install CRESCENDO - 17 Feb
+   4. Install CRESCENDO - 17 Feb
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="datacentre_talk.html">
-   ISC 22 IODC
+   5. ISC 22 IODC
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vol_crescendo.html">
-   Volume check crescendo mesh file
+   6. Volume check crescendo mesh file
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="VolumeChecker.html">
-   Topology file
+   7. Topology file
   </a>
  </li>
 </ul>
@@ -161,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Meetingnotes.html">
-   Gantt chart
+   8. Gantt chart
   </a>
  </li>
 </ul>
@@ -343,22 +343,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stripe-size-comparison-rank-2048">
-   Stripe size comparison rank 2048
+   2.1. Stripe size comparison rank 2048
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stripe-count-comparisons-rank-2048">
-   Stripe count comparisons rank 2048
+   2.2. Stripe count comparisons rank 2048
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#io-rates-between-nvme-file-mounting-and-archer2">
-   IO rates between NVMe File mounting and ARCHER2
+   2.3. IO rates between NVMe File mounting and ARCHER2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#discussion-of-results">
-   Discussion of results
+   2.4. Discussion of results
   </a>
  </li>
 </ul>
@@ -382,22 +382,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stripe-size-comparison-rank-2048">
-   Stripe size comparison rank 2048
+   2.1. Stripe size comparison rank 2048
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stripe-count-comparisons-rank-2048">
-   Stripe count comparisons rank 2048
+   2.2. Stripe count comparisons rank 2048
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#io-rates-between-nvme-file-mounting-and-archer2">
-   IO rates between NVMe File mounting and ARCHER2
+   2.3. IO rates between NVMe File mounting and ARCHER2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#discussion-of-results">
-   Discussion of results
+   2.4. Discussion of results
   </a>
  </li>
 </ul>
@@ -411,25 +411,25 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="qrm-march22">
-<h1>QRM March22<a class="headerlink" href="#qrm-march22" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2. </span>QRM March22<a class="headerlink" href="#qrm-march22" title="Permalink to this headline">#</a></h1>
 <section id="stripe-size-comparison-rank-2048">
-<h2>Stripe size comparison rank 2048<a class="headerlink" href="#stripe-size-comparison-rank-2048" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1. </span>Stripe size comparison rank 2048<a class="headerlink" href="#stripe-size-comparison-rank-2048" title="Permalink to this headline">#</a></h2>
 <p>Shows lower stripe sizes perform better I/O.</p>
 <a class="reference internal image-reference" href="../_images/stripesize.png"><img alt="../_images/stripesize.png" src="../_images/stripesize.png" style="width: 500px;" /></a>
 </section>
 <section id="stripe-count-comparisons-rank-2048">
-<h2>Stripe count comparisons rank 2048<a class="headerlink" href="#stripe-count-comparisons-rank-2048" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Stripe count comparisons rank 2048<a class="headerlink" href="#stripe-count-comparisons-rank-2048" title="Permalink to this headline">#</a></h2>
 <p>Comparison between stripe counts, and default stripe size. Shows more stripe counts gives better performance.
 Interesting, ADIOS2 performance doesnt vary significantly with changing stripe counts.</p>
 <a class="reference internal image-reference" href="imgs/mount.*"><img alt="imgs/mount.*" src="imgs/mount.*" style="width: 500px;" /></a>
 </section>
 <section id="io-rates-between-nvme-file-mounting-and-archer2">
-<h2>IO rates between NVMe File mounting and ARCHER2<a class="headerlink" href="#io-rates-between-nvme-file-mounting-and-archer2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3. </span>IO rates between NVMe File mounting and ARCHER2<a class="headerlink" href="#io-rates-between-nvme-file-mounting-and-archer2" title="Permalink to this headline">#</a></h2>
 <p>Comparison between mount dir and archer2 file system. Shows that the mount dir is slightly better but can be improved.</p>
 <a class="reference internal image-reference" href="imgs/mount.*"><img alt="imgs/mount.*" src="imgs/mount.*" style="width: 500px;" /></a>
 </section>
 <section id="discussion-of-results">
-<h2>Discussion of results<a class="headerlink" href="#discussion-of-results" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.4. </span>Discussion of results<a class="headerlink" href="#discussion-of-results" title="Permalink to this headline">#</a></h2>
 <p>The results obtained from the benchmarking show that the write rates obtained by using ADIOS2 BP4 I/O engine were higher than when using MPIIO, HDF5 and ADIOS2 HDF5 I/O engine.
 Using 2048 MPI ranks (16 full nodes), full stripe count (8) and default stripe size (1 MiB) ADIOS2 BP4 IO engine achieved a 4x improvement in IO write rates as compared to the HDF5 IO library. The peak writing rate in this configuration achieving using ADIOS2 BP4 was 13.3GB/s and by using HDF5 was 3.23GB/s. Additionally it was found that the write rates increased as the stripe counts increase and decreased as the stripe sizes increased.
 One of the reasons for these findings is ADIOS2 BP4 engine writes a lot of small files which do not need to be contiguous. It saves time by partially rearranging data and reducing contention in the file system \cite{noauthor_pio2_2019} which makes it faster than the other IO layers.</p>
@@ -497,13 +497,13 @@ Compilers used are the following;<br />
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">A64fx on isambard</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>A64fx on isambard</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="benchmark_c_crescendo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Crescendo input</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Crescendo input</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

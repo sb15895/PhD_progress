@@ -1,24 +1,17 @@
----
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-<!-- 
-# Gantt chart 
+#!/usr/bin/env python
+# coding: utf-8
 
-A book about my work in PhD.  -->
-<!-- ```{tableofcontents}
-``` 
- -->
+# <!-- 
+# # Gantt chart 
+# 
+# A book about my work in PhD.  -->
+# <!-- ```{tableofcontents}
+# ``` 
+#  -->
 
-```{code-cell} ipython3
-:tags: ["hide-input", "full-width"]
+# In[1]:
+
+
 from IPython.display import Image, display
 import datetime as dt
 import pandas as pd
@@ -46,8 +39,4 @@ fig.update_layout(
 fig.layout.title = None
 
 fig.show()
-```
-
-
-
 
