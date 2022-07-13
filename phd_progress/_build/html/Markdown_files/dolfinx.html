@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Crescendo input &#8212; PhD progress Jupyter book</title>
+    <title>Adding computational step -&gt; DOLFINX &#8212; PhD progress Jupyter book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="parallelread.html" />
-    <link rel="prev" title="2. QRM March22" href="qrmgraph.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
   Work done
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="a-hug.html">
    1. A64fx on isambard
@@ -127,8 +125,8 @@ const thebe_selector_output = ".output, .cell_output"
    2. QRM March22
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="benchmark_c_crescendo.html">
    3. Crescendo input
   </a>
  </li>
@@ -259,7 +257,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://sb15895.github.io/PhD_progress/issues/new?title=Issue%20on%20page%20%2FMarkdown_files/benchmark_c_crescendo.html&body=Your%20issue%20content%20here."
+        <a href="https://sb15895.github.io/PhD_progress/issues/new?title=Issue%20on%20page%20%2FMarkdown_files/dolfinx.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -287,7 +285,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Markdown_files/benchmark_c_crescendo.md"
+        <a href="../_sources/Markdown_files/dolfinx.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -324,100 +322,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#to-do">
-   3.1. TO DO:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-global-write-of-crescendo-completed">
-   3.2. 5 March - Global write of crescendo completed
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-graphing-script-updated">
-   3.3. 6-8 March - Graphing script updated
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-read-hdf5-parallel">
-   3.4. 7 March - Read HDF5 parallel
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-topology-mesh-linked-to-the-geometry-mesh">
-   3.5. 4 March - topology mesh linked to the geometry mesh
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Crescendo input</h1>
+                <h1>Adding computational step -> DOLFINX</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#to-do">
-   3.1. TO DO:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-global-write-of-crescendo-completed">
-   3.2. 5 March - Global write of crescendo completed
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-graphing-script-updated">
-   3.3. 6-8 March - Graphing script updated
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-read-hdf5-parallel">
-   3.4. 7 March - Read HDF5 parallel
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#march-topology-mesh-linked-to-the-geometry-mesh">
-   3.5. 4 March - topology mesh linked to the geometry mesh
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -425,46 +346,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="crescendo-input">
-<h1><span class="section-number">3. </span>Crescendo input<a class="headerlink" href="#crescendo-input" title="Permalink to this headline">#</a></h1>
-<p>Each rank writes the whole data set locally.</p>
-<section id="to-do">
-<h2><span class="section-number">3.1. </span>TO DO:<a class="headerlink" href="#to-do" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Global write CRESCENDO</p></li>
-<li><p>Read and write CRESCENDO in parallel</p></li>
-<li><p>Calculate volume of the mesh, using topology mesh</p></li>
-<li><p>In functions use global variables so that it can accept any number of dimensions</p></li>
-<li><p>Update graphing script</p></li>
-</ul>
-</section>
-<section id="march-global-write-of-crescendo-completed">
-<h2><span class="section-number">3.2. </span>5 March - Global write of crescendo completed<a class="headerlink" href="#march-global-write-of-crescendo-completed" title="Permalink to this headline">#</a></h2>
-<p>Done by dividing the crescnedo dim1 by number of processors. If i divide using MPI cartesian
-coordinates the results are too small for dim2 i.e. 3 and the warning comes up stating the
-processes are 0.</p>
-</section>
-<section id="march-graphing-script-updated">
-<h2><span class="section-number">3.3. </span>6-8 March - Graphing script updated<a class="headerlink" href="#march-graphing-script-updated" title="Permalink to this headline">#</a></h2>
-<p>Done by adding a crescendo flag essentially for graphs with 1 IO rate for 1 layer and 1 MPI rank.
-This flag changes the plotting function as well. Can potentially be more streamlined in the future.</p>
-<a class="reference internal image-reference" href="../_images/crescendo.pdf"><img alt="../_images/crescendo.pdf" src="../_images/crescendo.pdf" style="width: 500px;" /></a>
-<p>Results from 8 full nodes on ARCHER2, averaged 3 times and 10 times in program.</p>
-<p>BP4 has a lot faster parallel write performance, however peak has still not reached with max of 8 nodes.</p>
-<a class="reference internal image-reference" href="../_images/crescendo_32nodes.pdf"><img alt="../_images/crescendo_32nodes.pdf" src="../_images/crescendo_32nodes.pdf" style="width: 500px;" /></a>
-<p>Results from 32 full nodes on ARCHER2, averaged 3 times and 10 times in program.</p>
-<p>BP4 has a lot faster parallel write performance, however peak has still not reached with max of 8 nodes.</p>
-</section>
-<section id="march-read-hdf5-parallel">
-<h2><span class="section-number">3.4. </span>7 March - Read HDF5 parallel<a class="headerlink" href="#march-read-hdf5-parallel" title="Permalink to this headline">#</a></h2>
-<p>https://www.mcs.anl.gov/papers/P4091-0713_2.pdf
-Still unable to process parallel reads.</p>
-</section>
-<section id="march-topology-mesh-linked-to-the-geometry-mesh">
-<h2><span class="section-number">3.5. </span>4 March - topology mesh linked to the geometry mesh<a class="headerlink" href="#march-topology-mesh-linked-to-the-geometry-mesh" title="Permalink to this headline">#</a></h2>
-<p>h5dump -d MeshTags/tetra\ marker/topology CRESCENDO_ENGINE_LTMS_order1.h5 &gt; topology.txt
-Problem: c is not reading the mesh tag, because perhaps of the space between tetra marker.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="adding-computational-step-dolfinx">
+<h1>Adding computational step -&gt; DOLFINX<a class="headerlink" href="#adding-computational-step-dolfinx" title="Permalink to this headline">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">e609</span><span class="o">/</span><span class="n">e609</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">spack</span><span class="o">/</span><span class="n">setup</span><span class="o">-</span><span class="n">fenicsx</span><span class="o">-</span><span class="n">modules</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">module</span> <span class="n">avail</span> <span class="n">py</span><span class="o">-</span><span class="n">fenics</span><span class="o">-</span><span class="n">dolfinx</span>
+</pre></div>
+</div>
+<p>Can include the doflinx code as a computational step. This can be done by using C++ code.
+Then ASYNC IO can be added to the code. Examine feasability.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -494,20 +383,6 @@ Problem: c is not reading the mesh tag, because perhaps of the space between tet
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="qrmgraph.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>QRM March22</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="parallelread.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

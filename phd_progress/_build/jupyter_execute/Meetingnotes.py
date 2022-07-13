@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Meeting 22 June 
+# # Meeting notes 
+# 
+# ## 22 June 
 # 
 # 1. Realistic HPC workloads, compute step and writing step 
 # 2. Intercommunicators 
@@ -11,4 +13,7 @@
 #     a. Can show compression effects, DARSHAN modelling 
 #     
 #     b. Can show some results from different servers? (Doubtful) 
+# 
+# 
+# 
 # 

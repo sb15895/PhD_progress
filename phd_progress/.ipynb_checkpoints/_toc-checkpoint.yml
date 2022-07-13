@@ -15,6 +15,7 @@ parts:
   - file: Markdown_files/vol_crescendo
   - file: Markdown_files/VolumeChecker
   - file: Markdown_files/IO_server 
+  - file: Markdown_files/crescendo_updates
 - caption: Meeting notes 
   numbered: False
   chapters: 
